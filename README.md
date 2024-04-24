@@ -1,3 +1,62 @@
+
+### Характеристики ПК
+Данный скрипт был разработан и протестирован на следующей конфигурации ПК:
+
+|  Конфигурация  |  Детали спецификаций  |
+|----------------|----------------------|
+|  Процессор     |  Intel® Core™ i9-14900KF @3.20Ghz  |
+|  Память        |  128 ГБ DDR4 4200 МГц (32+32+32+32)  |
+|  Диск          |  M.2 PCIe SSD Samsung SSD 980 PRO 1000 ГБ  |
+|  Диск          |  M.2 PCIe SSD XPG GAMMIX S11 Pro 1000 ГБ |
+|  Дискретная графика  |  NVIDIA GeForce RTX 4090 24 ГБ  |
+|  CudaToolkit   |  ver.12.3  |
+|  OS   |  Windows 11 Pro |
+
+### !!!Важно: На данный момент данный репозиторий находится в бета-тесте.!!!
+
+## Установка и настройка
+
+Для начала работы с Llama3 GGUF //beta-test, выполните следующие шаги:
+
+### 1. Создание виртуального окружения
+
+Для изоляции проекта рекомендуется создать новое виртуальное окружение. Выполните следующие команды в терминале:
+
+```python
+conda create -n Llama3 python=3.9 ##очень важно именно версия 3.9
+conda activate Llama
+```
+
+### 2. Установка зависимостей
+
+Установите необходимые библиотеки, выполнив следующие команды:
+
+## Верссии tensorflow выше 2.10 не работают на Windows поэтому ставим версию ниже 2.11
+
+```python
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+pip install transformers
+pip install torch --upgrade --index-url https://download.pytorch.org/whl/cu121
+pip install xformers --upgrade --index-url https://download.pytorch.org/whl/cu121
+pip install jupyter notebook
+python -m pip install "tensorflow<2.11"
+```
+
+### 3. Проверка настройки TensorFlow GPU
+
+Для использования GPU в TensorFlow, убедитесь, что настройка выполнена корректно. Выполните следующую команду:
+
+```python
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
+если все настроено правильно вы получаете ответ :
+
+[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+
+```
+
+
 ---
 license: llama3
 tags:

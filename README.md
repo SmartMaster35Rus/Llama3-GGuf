@@ -26,9 +26,11 @@
 
 скачиваем 4 файла в нашу папку проекта :
 
+  https://huggingface.co/Orenguteng/Lexi-Llama-3-8B-Uncensored/resolve/main/model-00001-of-00004.safetensors?download=true
+  https://huggingface.co/Orenguteng/Lexi-Llama-3-8B-Uncensored/resolve/main/model-00002-of-00004.safetensors?download=true
+  https://huggingface.co/Orenguteng/Lexi-Llama-3-8B-Uncensored/resolve/main/model-00003-of-00004.safetensors?download=true
+  https://huggingface.co/Orenguteng/Lexi-Llama-3-8B-Uncensored/resolve/main/model-00004-of-00004.safetensors?download=true
   
-  
-
 
 ### 1. Создание виртуального окружения
 
@@ -51,7 +53,6 @@ conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 pip install transformers
 pip install torch --upgrade --index-url https://download.pytorch.org/whl/cu121
 pip install xformers --upgrade --index-url https://download.pytorch.org/whl/cu121
-pip install jupyter notebook
 python -m pip install "tensorflow<2.11"
 ```
 

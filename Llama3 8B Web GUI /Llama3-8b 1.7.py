@@ -69,7 +69,7 @@ def kill_process():
     except Exception as e:
         st.error(f"Ошибка при попытке завершить процесс: {e}")
 
-st.title("Улучшенный чат с AI")
+st.title("Llama3 8B Web GUI")
 
 if 'history' not in st.session_state:
     st.session_state['history'] = []

@@ -1,3 +1,4 @@
+![image/png](https://cdn-uploads.huggingface.co/production/uploads/644ad182f434a6a63b18eee6/H6axm5mlmiOWnbIFvx_em.png)
 
 # Llama3 8B Web GUI
 
